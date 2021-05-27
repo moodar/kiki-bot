@@ -10,7 +10,6 @@ import {
 } from "./Styles";
 
 const Card = (props) => {
-  console.log("card component", props);
   const hasImage = props?.payload?.fields?.image?.stringValue;
   //   return <StyledCard sender={props.speaks}>asd</StyledCard>;
   return (

@@ -14,7 +14,6 @@ module.exports = (app) => {
     );
 
     if (responseFromServer.token) {
-      console.log("Tá caindo aqui??????", responseFromServer);
       res.cookie("token", responseFromServer.token, {
         maxAge: 999999999,
       });
@@ -37,8 +36,6 @@ module.exports = (app) => {
   });
 
   app.post("/api/df_event_query", async (req, res) => {
-    console.log("aiiiiiiiiiiiiiiii");
-
     let responseFromServer = await chatbot.eventQuery(
       req.body.event,
       req.body.userID,

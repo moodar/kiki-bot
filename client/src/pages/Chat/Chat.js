@@ -63,7 +63,7 @@ class Chat extends Component {
       ).data;
       this.updateUserState(user);
     } catch (err) {
-      console.log("err", err);
+      // console.log("err", err);
     }
   }
 
@@ -86,7 +86,6 @@ class Chat extends Component {
       },
       { withCredentials: true, credentials: "include" }
     );
-    console.log("test", response.data);
 
     if (response.data.token) {
       cookies.set("token", response.data.token, { path: "/" });
